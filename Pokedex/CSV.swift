@@ -2,11 +2,10 @@
 //  CSV.swift
 //  Pokedex
 //
-//  Created by Mike on 8/26/16.
+//  Created by Patrick on 8/26/16.
 //  Copyright © 2016 Little Lujan LLC. All rights reserved.
 //
 
-import Foundation
 import Foundation
 
 public class CSV {

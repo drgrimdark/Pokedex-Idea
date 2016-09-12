@@ -2,7 +2,7 @@
 //  PokedexVC.swift
 //  Pokedex
 //
-//  Created by Mike on 8/26/16.
+//  Created by Patrick on 8/26/16.
 //  Copyright © 2016 Little Lujan LLC. All rights reserved.
 //
 
@@ -76,7 +76,7 @@ class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                 poke = pokemon[indexPath.row]
             }
             
-            performSegueWithIdentifier("PokemonDetailVC", sender: poke)
+            performSegueWithIdentifier("PokemonDetailsVC", sender: poke)
         }
         
         func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -116,8 +116,8 @@ class PokedexVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         }
         
         override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if segue.identifier == "PokemonDetailVC" {
-                if let detailsVC = segue.destinationViewController as? PokemonDetailVC {
+            if segue.identifier == "PokemonDetailsVC" {
+                if let detailsVC = segue.destinationViewController as? PokemonDetailsVC {
                     if let poke = sender as? Pokemon {
                         detailsVC.pokemon = poke
                     }
